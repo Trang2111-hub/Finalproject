@@ -1,53 +1,53 @@
 print('Smart money xin chào!')
-tong=0
-answer=1
+tong = 0
+answer = 1
 print("Bạn muốn sử dụng chức năng nào\n1. Quản lí thu nhập.\n2. Quản lý chi tiêu.\n3. Thoát")
-while answer!= 3:
-   choice=input('Nhập lựa chọn: ')
-   if choice == "1":
-       s=int(input("Vui lòng nhập thu nhập của bạn: "))
-       tong= tong + s
-       print('Tổng thu nhập hiện tại của bạn là:', tong)
-       a= tong*0.5
-       b= tong*0.3
-       c= tong*0.2
-       print('Chi phí thiết yếu sẽ là:', a)
-       print('Chi tiêu cá nhân sẽ là:', b)
-       print('Mục tiêu tài chính sẽ là:', c)
-   elif choice == "2":
-       if tong == 0:
-           print('''Tài khoản của bạn hiện không đủ tiền để chi tiêu.
+while answer != 3:
+    choice = input('Nhập lựa chọn chức năng: ')
+    if choice == "1":
+        s = int(input("Vui lòng nhập thu nhập của bạn: "))
+        tong = tong + s
+        print('Tổng thu nhập hiện tại của bạn là:', tong)
+        a = tong * 0.5
+        b = tong * 0.3
+        c = tong * 0.2
+        print('Chi phí thiết yếu sẽ là:', a)
+        print('Chi tiêu cá nhân sẽ là:', b)
+        print('Mục tiêu tài chính sẽ là:', c)
+    elif choice == "2":
+        if tong == 0:
+            print('''Tài khoản của bạn hiện không đủ tiền để chi tiêu.
 Vui lòng nhập lựa chọn khác''')
-       else:
-           print("Bạn có muốn thực hiện giao dịch không? Nhập YES hoặc NO:")
-           rep = input()
-           while rep == "YES":
-               print("""Chọn loại ví bạn muốn thực hiện giao dịch:
-                      A: Ví chi phí thiết yếu
-                      B: Ví chi phí cá nhân
-                      C: Ví mục tiêu tài chính """)
-               chon = input("Lựa chọn của bạn là:")
-               if chon == "A":
-                   a1 = int(input("Số tiền bạn tiêu:"))
-                   a -= a1
-                   print("Số dư ví chi phí thiết yếu là", a)
-                   rep = input("Bạn có muốn giao dịch tiếp? Nhập YES hoặc NO:")
-               elif chon == "B":
-                   b1 = int(input("Số tiền bạn tiêu:"))
-                   b -= b1
-                   print("Số dư ví chi phí cá nhân là", b)
-                   rep = input("Bạn có muốn giao dịch tiếp? Nhập YES hoặc NO:")
-               elif chon == "C":
-                   c1 = int(input("Số tiền bạn tiêu:"))
-                   c -= c1
-                   print("Số dư ví mục tiêu tài chính là", c)
-                   rep = input("Bạn có muốn giao dịch tiếp? Nhập YES hoặc NO:")
-               tong = a + b + c
-           else:
-               print("Số dư ví chi phí thiết yếu là", a)
-               print("Số dư ví chi phí cá nhân là", b)
-               print("Số dư ví mục tiêu tài chính là", c)
- 
-   else:
-       answer = 3
- 
+        else:
+            print("Bạn có muốn thực hiện giao dịch không? Nhập 1(YES) hoặc 2(NO): ")
+            rep = input()
+            while rep == "1":
+                print("""Chọn loại ví bạn muốn thực hiện giao dịch:
+                      1: Ví chi phí thiết yếu
+                      2: Ví chi phí cá nhân
+                      3: Ví mục tiêu tài chính """)
+                chon = input("Lựa chọn của bạn là:")
+                if chon == "1":
+                    a1 = int(input("Số tiền bạn tiêu: "))
+                    a -= a1
+                    print("Số dư ví chi phí thiết yếu là", a)
+                    rep = input("Bạn có muốn giao dịch tiếp? Nhập 1(YES) hoặc 2(NO): ")
+                elif chon == "2":
+                    b1 = int(input("Số tiền bạn tiêu: "))
+                    b -= b1
+                    print("Số dư ví chi phí cá nhân là", b)
+                    rep = input("Bạn có muốn giao dịch tiếp? Nhập 1(YES) hoặc 2(NO):")
+                elif chon == "3":
+                    c1 = int(input("Số tiền bạn tiêu:"))
+                    c -= c1
+                    print("Số dư ví mục tiêu tài chính là", c)
+                    rep = input("Bạn có muốn giao dịch tiếp? Nhập 1(YES) hoặc 2(NO): ")
+                tong = a + b + c
+            else:
+                print("Số dư ví chi phí thiết yếu là", a)
+                print("Số dư ví chi phí cá nhân là", b)
+                print("Số dư ví mục tiêu tài chính là", c)
+
+    else:
+        answer = 3
+
